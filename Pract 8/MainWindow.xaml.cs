@@ -45,5 +45,35 @@ namespace Pract_8
                 MessageBoxImage.Information
                 );
         }
+
+        private void btnVegetablesBenefit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnDifferenceBetweenFruits_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnVegetablesNutrientsAmount_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNumberByWeight_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnShowVegetablesList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnShowInfo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

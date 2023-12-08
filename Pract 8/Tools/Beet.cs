@@ -1,6 +1,6 @@
 ﻿namespace Pract_8.Tools
 {
-    public class Сarrot : Vegetables
+    public class Beet: Vegetables
     {
         // Поля класса
         private string _color;
@@ -9,9 +9,9 @@
         // Свойства класса
         public string Color
         {
-            get 
-            { 
-                return _color; 
+            get
+            {
+                return _color;
             }
 
             set
@@ -47,7 +47,7 @@
 
         public override int NumberByWeight(int weight)
         {
-            int minimumNumber = 5;
+            int minimumNumber = 3;
 
             int result = weight * Convert.ToInt32(minimumNumber);
 

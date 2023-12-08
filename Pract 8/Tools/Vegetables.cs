@@ -52,7 +52,7 @@
         /// Выводит сообщение о пользе овощей
         /// </summary>
         /// <returns>Сообщение с пользой овощей</returns>
-        public string VegetablesBenefit()
+        public virtual string Benefit()
         {
             string result = "Все овощи очень полезны и имеют много полезных свойвств." +
                 "Например, в каждом из овощей много углеводов, " +
@@ -81,7 +81,7 @@
         /// Выводит сообщение с количеством полезных веществ
         /// </summary>
         /// <returns>Сообщение с количеством полезных вещейств</returns>
-        public string VegetablesNutrientsAmount()
+        public virtual string VegetablesNutrientsAmount()
         {
             string result = "В овощах находятся " +
                 "(все значение показаны в расчёте на 100 грамм сырых овощей):" +
@@ -97,7 +97,7 @@
         /// </summary>
         /// <param name="weight">Вес человека (в кг)</param>
         /// <returns>Рассчитанное количество овощей (в граммах)</returns>
-        public int VegetablesNumberByWeight(int weight)
+        public virtual int NumberByWeight(int weight)
         {
             int minimumNumber = 5;
 
