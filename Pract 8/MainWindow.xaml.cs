@@ -1,13 +1,5 @@
-﻿using System.Text;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using Pract_8.Tools;
 
 namespace Pract_8
 {
@@ -16,6 +8,11 @@ namespace Pract_8
     /// </summary>
     public partial class MainWindow : Window
     {
+        Vegetables vegetables = new Vegetables();
+        Сarrot carrot = new Сarrot();
+        Beet beet = new Beet();
+        Onion onion = new Onion();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -48,32 +45,50 @@ namespace Pract_8
 
         private void btnVegetablesBenefit_Click(object sender, RoutedEventArgs e)
         {
-
+            txtBoxVegetablesBenefit.Text = vegetables.Benefit();
         }
 
         private void btnDifferenceBetweenFruits_Click(object sender, RoutedEventArgs e)
         {
-
+            txtBoxDifferenceBetweenFruits.Text = vegetables.VegetablesDifferenceBetweenFruits();
         }
 
         private void btnVegetablesNutrientsAmount_Click(object sender, RoutedEventArgs e)
         {
-
+            txtBoxVegetablesNutrientsAmount.Text = vegetables.VegetablesNutrientsAmount();
         }
 
         private void btnNumberByWeight_Click(object sender, RoutedEventArgs e)
         {
-
+            int weight = Convert.ToInt32(txtBoxWeight.Text);
+            txtBoxNumberByWeight.Text = vegetables.NumberByWeight(weight).ToString();
         }
 
         private void btnShowVegetablesList_Click(object sender, RoutedEventArgs e)
         {
-
+            txtBoxVegetablesList.Text = vegetables.VegetablesList();
         }
 
         private void btnShowInfo_Click(object sender, RoutedEventArgs e)
         {
-
+            if ((bool)rBtnCarrot.IsChecked)
+            {
+                int weight = Convert.ToInt32(txtBoxYourWeight.Text);
+                txtBoxBenefit.Text = carrot.Benefit();
+                txtBoxNumber.Text = carrot.NumberByWeight(weight).ToString();
+            }
+            else if ((bool)rBtnBeet.IsChecked)
+            {
+                int weight = Convert.ToInt32(txtBoxYourWeight.Text);
+                txtBoxBenefit.Text = beet.Benefit();
+                txtBoxNumber.Text = beet.NumberByWeight(weight).ToString();
+            }
+            else if ((bool)rBtnOnion.IsChecked)
+            {
+                int weight = Convert.ToInt32(txtBoxYourWeight.Text);
+                txtBoxBenefit.Text = onion.Benefit();
+                txtBoxNumber.Text = onion.NumberByWeight(weight).ToString();
+            }
         }
     }
 }
